@@ -18,12 +18,11 @@ describe("Sign Up", () => {
 //sign up with email that's not registered before
 describe("Sign Up", () => {
   it("should let you Sign Up", async () => {
-    const uniqName = Math.random().toString(36);
     const uniqEmail = Math.random().toString(36) + "@gmail.com";
 
     await browser.url("https://teti-library.vercel.app/signup");
 
-    await $('input[placeholder="Name"]').setValue(uniqName);
+    await $('input[placeholder="Name"]').setValue("taylor");
     await $('input[placeholder="Email"]').setValue(uniqEmail);
     await $('input[placeholder="Password"]').setValue("alltoowell");
     await $('input[placeholder="Confirm Password"]').setValue("alltoowell");
